@@ -14,11 +14,17 @@ Output will be:
 Installing symfony/process 7.0
 
 -- PHP 8.2 - symfony/process 7.0
+PHP 8.2.22 (cli) (built: Aug  1 2024 21:59:02) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.22, Copyright (c) Zend Technologies
 isStarted(): bool(true)
 isTerminated(): bool(true)
 isSuccessful(): bool(false)
 
 -- PHP 8.3 - symfony/process 7.0
+PHP 8.3.10 (cli) (built: Aug  1 2024 19:53:18) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.10, Copyright (c) Zend Technologies
 isStarted(): bool(true)
 isTerminated(): bool(true)
 isSuccessful(): bool(false)
@@ -26,11 +32,17 @@ isSuccessful(): bool(false)
 Installing symfony/process 7.1
 
 -- PHP 8.2 - symfony/process 7.1
+PHP 8.2.22 (cli) (built: Aug  1 2024 21:59:02) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.2.22, Copyright (c) Zend Technologies
 isStarted(): bool(true)
 isTerminated(): bool(true)
 isSuccessful(): bool(false)
 
 -- PHP 8.3 - symfony/process 7.1
+PHP 8.3.10 (cli) (built: Aug  1 2024 19:53:18) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.10, Copyright (c) Zend Technologies
 
 Fatal error: Uncaught Symfony\Component\Process\Exception\ProcessStartFailedException: The command "'unknown-command'" failed.
 
