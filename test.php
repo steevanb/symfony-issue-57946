@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
+use Symfony\Component\Process\Exception\ProcessStartFailedException;
 use Symfony\Component\Process\Exception\RuntimeException;
 use Symfony\Component\Process\Process;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $process = new Process(['unknown-command']);
-try {
-    $process->run();
-} catch (RuntimeException) {}
+$process->run();
 
 echo 'isStarted(): ';
 var_dump($process->isStarted());

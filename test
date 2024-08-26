@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+set -u
+
+alias docker-composer="docker run --rm -it --volume $(pwd):/app --user $(id -u):$(id -g) --workdir /app composer:2.7.7"
+alias docker-php-82="docker run --rm -it --volume $(pwd):/app --user $(id -u):$(id -g) --workdir /app php:8.2.22-cli-alpine3.20 php test.php"
+alias docker-php-83="docker run --rm -it --volume $(pwd):/app --user $(id -u):$(id -g) --workdir /app php:8.3.10-cli-alpine3.20 php test.php"
+
+echo 'Installing symfony/process 7.0'
+docker-composer require symfony/process:7.0.* > /dev/null
+
+echo ''
+echo '-- PHP 8.2 - symfony/process 7.0'
+docker-php-82
+
+echo ''
+echo '-- PHP 8.3 - symfony/process 7.0'
+docker-php-83
+
+echo ''
+echo 'Installing symfony/process 7.1'
+docker-composer require symfony/process:7.1.* > /dev/null
+
+echo ''
+echo '-- PHP 8.2 - symfony/process 7.1'
+docker-php-82
+
+echo ''
+echo '-- PHP 8.3 - symfony/process 7.1'
+docker-php-83
